@@ -12,7 +12,7 @@ export default function App() {
         PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
         {
           title: "Audio Transfer",
-          message: "Allow access to the microphone for audio based data transfer",
+          message: "Allow access to the microphone",
           buttonNeutral: "Ask Me Later",
           buttonNegative: "Cancel",
           buttonPositive: "OK"

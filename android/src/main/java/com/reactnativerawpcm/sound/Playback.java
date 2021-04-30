@@ -36,13 +36,6 @@ public class Playback {
     }
 
     public int write(short[] pcm) {
-      ByteBuffer b = ByteBuffer.allocate(pcm.length*2);
-      for (int i=0; i<pcm.length; i++) {
-        b.putShort(pcm[i]);
-      }
-      String base64Data = Base64.encodeToString(b.array(), Base64.NO_WRAP);
-      EventTrigger.getInstance().emit("pcm", base64Data);
-
       int written = audio.write(pcm, 0, pcm.length, AudioTrack.WRITE_BLOCKING);
       written_to_stream += written;
       return written;
