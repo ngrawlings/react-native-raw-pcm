@@ -59,7 +59,9 @@ public class RawPcmModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void stop(Promise promise) {
-        capture.stop();
+        if (capture)
+            capture.stop();
+        
         promise.resolve(true);
     }
 
