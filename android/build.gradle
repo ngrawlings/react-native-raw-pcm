@@ -18,7 +18,7 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('RawPcm_compileSdkVersion', 29)
+    compileSdkVersion safeExtGet('RawPcm_compileSdkVersion', 30)
     buildToolsVersion safeExtGet('RawPcm_buildToolsVersion', '29.0.2')
     defaultConfig {
         minSdkVersion safeExtGet('RawPcm_minSdkVersion', 16)
